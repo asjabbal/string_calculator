@@ -33,4 +33,12 @@ class StringCalculatorTest < Minitest::Test
 
     assert_equal "Negative numbers not allowed: [-3, -6, -8]", error.message
   end
+
+  def test_different_delimiters_with_negative_numbers_str
+    error = assert_raises(StringCalculator::NegativeNumbersNotAllowed) do
+      StringCalculator.new.add("//;1\n-2,3;4 #-5")
+    end
+
+    assert_equal "Negative numbers not allowed: [-2, -5]", error.message
+  end
 end
