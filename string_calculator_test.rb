@@ -13,4 +13,8 @@ class StringCalculatorTest < Minitest::Test
   def test_multiple_numbers_str
     assert_equal 28, StringCalculator.new.add("1,2,3,4,5,6,7")
   end
+
+  def test_different_delimiters_numbers_str
+    assert_equal 15, StringCalculator.new.add("//;1\n2,3;4 #5")
+  end
 end
