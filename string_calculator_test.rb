@@ -54,7 +54,7 @@ class StringCalculatorTest < Minitest::Test
     assert_equal "Negative numbers not allowed: [-1, -4]", error.message
   end
 
-  # Below test cases taken from https://osherove.com/tdd-kata-1/
+  # Below test cases are taken from https://osherove.com/tdd-kata-1/
   def test_less_than_or_eq_to_1000_numbers_str
     assert_equal 1570, StringCalculator.new.add("1,2,567, 1000")
   end

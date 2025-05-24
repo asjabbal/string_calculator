@@ -7,6 +7,8 @@ class StringCalculator
     negative_numbers = check_negative_numbers(numbers)
     raise NegativeNumbersNotAllowed, "Negative numbers not allowed: #{negative_numbers}" if negative_numbers.size > 0
 
+    numbers = reject_numbers_gt_1000(numbers)
+
     numbers.sum
   end
 
@@ -19,5 +21,9 @@ class StringCalculator
 
   def check_negative_numbers(numbers)
     numbers.select{|num| num < 0}
+  end
+
+  def reject_numbers_gt_1000(numbers)
+    numbers.reject{|num| num > 1000}
   end
 end
