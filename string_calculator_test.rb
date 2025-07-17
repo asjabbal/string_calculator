@@ -62,4 +62,9 @@ class StringCalculatorTest < Minitest::Test
   def test_greater_than_1000_numbers_str
     assert_equal 570, StringCalculator.new.add("//;1\n2 ;567, 1011")
   end
+
+  def test_star_str
+    # multiplying here bcoz star is available in the string
+    assert_equal 24, StringCalculator.new.add("//*2***3***4")
+  end
 end
