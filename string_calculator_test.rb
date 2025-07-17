@@ -67,4 +67,10 @@ class StringCalculatorTest < Minitest::Test
     # multiplying here bcoz star is available in the string
     assert_equal 24, StringCalculator.new.add("//*2***3***4")
   end
+
+  def test_cube_addition
+    assert_equal 9, StringCalculator.new.add("1,2,2,2")
+    assert_equal 12, StringCalculator.new.add("1,2,2,2,3")
+    assert_equal 81, StringCalculator.new.add("1,2,2,2,3,4,4,4,5")
+  end
 end
