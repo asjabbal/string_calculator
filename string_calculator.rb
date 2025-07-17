@@ -41,7 +41,7 @@ class StringCalculator
     filtered_numbers = []
     numbers.each do |n|
       numbers_count[n] = numbers_count[n].to_i + 1
-      filtered_numbers << n if numbers_count[n] >= 3
+      filtered_numbers << n if numbers_count[n] >= 3 && !filtered_numbers.include?(n)
     end
 
     if filtered_numbers.size == 0
