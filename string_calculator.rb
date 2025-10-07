@@ -9,18 +9,10 @@ class StringCalculator
 
     numbers = reject_numbers_gt_1000(numbers)
 
-    numbers_str.include?("***") ? multiply_numbers(numbers) : add_numbers(numbers)
+    numbers.sum
   end
 
   private
-
-  def add_numbers(numbers)
-    numbers.reduce(0, :+)
-  end
-
-  def multiply_numbers(numbers)
-    numbers.reduce(1, :*)
-  end
 
   def extract_numbers(numbers_str)
     numbers = numbers_str.scan(/-?\d+/)
