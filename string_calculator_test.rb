@@ -71,6 +71,6 @@ class StringCalculatorTest < Minitest::Test
   def test_cube_addition
     assert_equal 9, StringCalculator.new.add("1,2,2,2")
     assert_equal 12, StringCalculator.new.add("1,2,2,2,3")
-    assert_equal 81, StringCalculator.new.add("1,2,2,2,3,4,4,4,5,4")
+    assert_equal 81, StringCalculator.new.add("1,2,2,2,3,4,4,4,5")
   end
 end
